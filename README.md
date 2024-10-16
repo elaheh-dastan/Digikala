@@ -12,5 +12,5 @@ Skip list is a probabilistic data structure that allows inserting and searching 
 
 It's constructed by several layers of linked lists. The lowesr layer has all the elements. When moving to higher levels, the number of skipped elements increases (decreasing the number of connections)
 
-![images/skip-list.jpg](images/skip-list.jpg)
+![images/skip-list.jpg](images/skip_list.jpg)
 
