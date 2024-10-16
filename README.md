@@ -14,3 +14,7 @@ It's constructed by several layers of linked lists. The lowesr layer has all the
 
 ![images/skip-list.jpg](images/skip_list.jpg)
 
+Search for the value starts from the highest level and compares it with its next element:
+
+If the value is less or equal to the next elemnt, proceeds to its next element otherwise, descend to the lower layer and repeat the same.
+
