@@ -16,5 +16,7 @@ It's constructed by several layers of linked lists. The lowesr layer has all the
 
 Search for the value starts from the highest level and compares it with its next element:
 
-If the value is less or equal to the next elemnt, proceeds to its next element otherwise, descend to the lower layer and repeat the same.
+If the value is less or equal to the next elemnt, proceeds to its next element otherwise, descend to the lower layer and repeat the same. At the end the algorithm finds the desired node.
+
+If an element appears in layer i, then the probability that 
 
