@@ -64,3 +64,14 @@ The naive approach takes M closest candidates. Nevertheless, it is not always th
 
 Imagine a graph with the structure in the figure below. There are three regions with two of them not being connected to each other. As a result, getting, for example, from point A to B requires a long path through another region. It would be logical to somehow connect these two regions for better navigation.
 
+![images/photo_2024-10-28_19-36-12.jpg](images/photo_2024-10-28_19-36-12.jpg)
+
+In this case, the naive approach takes (B and C) and connects X to them.
+
+The heuristic considers not only the closest distances between nodes but also the connectivity of different regions on the graph.
+
+The heuristic chooses the first nearest neighbour (B) and connects to it. Then the algorithm takes another most closest nearest neighbour (C) and build an edge to it only if the distance from this neighbour to the new node (X) is smaller than any distance from this neighbour to all already connected vertices (B).
+
+The heuristic chooses B and builds the edge BX. Then the algorithm chooses C. However, BC < CX. This indicates that adding CX is not optimal because there already exists BX and the nodes B and C are very close to each other. the same analogy proceeds with the nodes D and E. After that the algorithm examines the node A. This time it satisfies the condition since BA > AX.
+
+
