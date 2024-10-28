@@ -53,3 +53,9 @@ HNSW is based on the same principles as skip list and navigable small world.
 #### Search
 ![images/photo_2024-10-28_17-29-07.jpg](images/photo_2024-10-28_17-29-07.jpg)
 
+#### Construction
+##### Choosing the maximum layer
+Every node is randomly assigned an integer I indicating the maximum layer at which this node can presents in the graph. The authors select I random;y for each node with an exponentially decaying probability distribuion normalized by the non-zero multiplier mL (mL = 0 results in a single layer). Normally, the majority of I values should be equal to 0.
+
+To achieve the optimum performance advantage of the controllable hierarchy, the overlap between neighbours on different layers (i.e. percent of element neighbours that are also belong to other layers) has to be small.
+
