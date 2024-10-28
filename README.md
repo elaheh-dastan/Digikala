@@ -18,5 +18,13 @@ Search for the value starts from the highest level and compares it with its next
 
 If the value is less or equal to the next elemnt, proceeds to its next element otherwise, descend to the lower layer and repeat the same. At the end the algorithm finds the desired node.
 
-If an element appears in layer i, then the probability that 
+If an element appears in layer i, then the probability that it will appear in layer i + 1 is equal to p (usually set to 0.5 or 0.25). 
+
+This process is much faster than the normal linear search in the linked list. In fact, HNSW inherits the same idea but instead of linked lists, it uses graphs.
+
+### Navigable Small World
+Navigable small world is a graph with polylogarithmic T = O(log^k(n)) search complexity which uses greedy routing. Routing refers to the process of starting from low-degree vertices and ending with high-degree vertices. Since low-degree vertices have very few connections, the algorithm can rapidly move between them to efficiently navigate to the region where the nearest neighbor is likely to be located. Then it gradually zooms in and switches to high-degree vertices.
+
+#### Search
+
 
