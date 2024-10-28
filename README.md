@@ -38,3 +38,17 @@ the accuracy can be improved by using several entry points
 
 #### Construction
 Shuffle dataset points and insert them one by one in the greaph. New node is linked by edges to the M nearest vertices to it.
+
+![images/photo_2024-10-28_17-00-00.jpg](images/photo_2024-10-28_17-00-00.jpg)
+
+M = 2
+
+In most scenarios, long-range edges will likely be created at the beginning phase of the graoh construction. They play an important role in graph navigation.
+
+Links to the closest neighbours of the elements inserted in the beginning of the construction later becomes bridges between the network hubs that keep the overall graph connectivity and allow the logarithmic scaling of the number of hops during greedy routing.
+
+### HNSW
+HNSW is based on the same principles as skip list and navigable small world.
+
+#### Search
+
