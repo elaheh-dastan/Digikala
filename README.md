@@ -51,4 +51,5 @@ Links to the closest neighbours of the elements inserted in the beginning of the
 HNSW is based on the same principles as skip list and navigable small world.
 
 #### Search
+![images/photo_2024-10-28_17-29-07.jpg](images/photo_2024-10-28_17-29-07.jpg)
 
