@@ -35,3 +35,6 @@ Early stopping is one of the problems of the algorithm. It occurs especially at 
 ![images/photo_2024-10-28_15-55-52.jpg](images/photo_2024-10-28_15-55-52.jpg)
 
 the accuracy can be improved by using several entry points
+
+#### Construction
+Shuffle dataset points and insert them one by one in the greaph. New node is linked by edges to the M nearest vertices to it.
