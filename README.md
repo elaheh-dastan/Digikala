@@ -29,3 +29,7 @@ Navigable small world is a graph with polylogarithmic T = O(log^k(n)) search com
 ![images/photo_2024-10-28_15-35-07.jpg
 ](images/photo_2024-10-28_15-35-07.jpg
 )
+
+Node A is used as an entry point. Node D is closer to the query than B. Then node E is the closest neighbour to the query, so we move to E. Finally the search process will lead to node L. Since all neighbours of L are located further from the query than itself, we stop the algorithm and return L as the answer to the query.
+
+Early stopping is one of the problems of the algorithm. It occurs especially at the beginning of the search procedure when there are no better neighbour nodes than the current one. This might happen when the starting region has too many low-degree vertices.
