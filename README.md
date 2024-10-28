@@ -59,3 +59,8 @@ Every node is randomly assigned an integer I indicating the maximum layer at whi
 
 To achieve the optimum performance advantage of the controllable hierarchy, the overlap between neighbours on different layers (i.e. percent of element neighbours that are also belong to other layers) has to be small.
 
+##### Candidate Selection Heuristic
+The naive approach takes M closest candidates. Nevertheless, it is not always the optimal choice.
+
+Imagine a graph with the structure in the figure below. There are three regions with two of them not being connected to each other. As a result, getting, for example, from point A to B requires a long path through another region. It would be logical to somehow connect these two regions for better navigation.
+
