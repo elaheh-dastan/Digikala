@@ -26,5 +26,6 @@ This process is much faster than the normal linear search in the linked list. In
 Navigable small world is a graph with polylogarithmic T = O(log^k(n)) search complexity which uses greedy routing. Routing refers to the process of starting from low-degree vertices and ending with high-degree vertices. Since low-degree vertices have very few connections, the algorithm can rapidly move between them to efficiently navigate to the region where the nearest neighbor is likely to be located. Then it gradually zooms in and switches to high-degree vertices.
 
 #### Search
-
-
+![images/photo_2024-10-28_15-35-07.jpg
+](images/photo_2024-10-28_15-35-07.jpg
+)
