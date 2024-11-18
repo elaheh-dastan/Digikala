@@ -14,3 +14,7 @@ LDA takes a geometric approach.
 ![images/setting.png](images/setting.png)
 
 ![images/setting_2.png](images/setting_2.png)
+
+![images/alpha.png](images/alpha.png)
+
+![images/dist_of_dist.png](images/dist_of_dist.png)
