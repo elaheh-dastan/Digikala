@@ -11,3 +11,5 @@ LDA takes a geometric approach.
 
 ![images/blueprint.png](images/blueprint.png)
 
+![images/setting.png](images/setting.png)
+
