@@ -9,3 +9,5 @@ LDA takes a geometric approach.
 
 ![images/best_setting.png](images/best_setting.png)
 
+![images/blueprint.png](images/blueprint.png)
+
