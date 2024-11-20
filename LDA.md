@@ -18,3 +18,5 @@ LDA takes a geometric approach.
 ![images/alpha.png](images/alpha.png)
 
 ![images/dist_of_dist.png](images/dist_of_dist.png)
+
+In the image above, the corners are topics and the points inside are words.
