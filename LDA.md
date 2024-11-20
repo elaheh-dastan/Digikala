@@ -22,3 +22,5 @@ LDA takes a geometric approach.
 In the image above, the corners are topics and the points inside are DOCUMENTS.
 
 ![images/dirichle_distributions.png](images/dirichle_distributions.png)
+
+![images/latentDA.png](images/latentDA.png)
