@@ -29,3 +29,5 @@ This formula calculates the probability that a particular document comes out of 
 
 ![images/LDA_formula.png](images/LDA_formula.png)
 
+![images/LDA_formula_image.png](images/LDA_formula_image.png)
+
