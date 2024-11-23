@@ -26,3 +26,6 @@ In the image above, the corners are topics and the points inside are DOCUMENTS.
 ![images/latentDA.png](images/latentDA.png)
 
 This formula calculates the probability that a particular document comes out of the machine
+
+![images/LDA_formula.png](images/LDA_formula.png)
+
