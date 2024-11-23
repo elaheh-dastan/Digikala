@@ -31,3 +31,7 @@ This formula calculates the probability that a particular document comes out of 
 
 ![images/LDA_formula_image.png](images/LDA_formula_image.png)
 
+
+From alpha we get theta, from beta we get thai.
+
+We combine zed and thai to obtain a list of words, one word per topic. We concatenate these words to obtain a document and then we do this as many times as number of documents in the corpus.
