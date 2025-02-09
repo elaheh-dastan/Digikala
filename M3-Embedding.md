@@ -51,13 +51,14 @@ How ColBERT Works:
     During search, instead of computing full cross-attention (which is expensive), ColBERT uses efficient Maximum Similarity search to retrieve relevant documents.
     It enables fast nearest neighbor search using inverted indexes and quantization.
 
-Model	Interaction Type	Speed	Effectiveness
-BM25	Lexical (TF-IDF)	⚡ Fast	😐 Decent
-DPR (Dense Retriever)	Early (single vector)	⚡⚡ Fast	😊 Good
-Cross-Encoder (BERT re-ranker)	Full Interaction	🐢 Slow	😍 Best
-ColBERT	Late Interaction	⚡⚡ Fast	😃 Very Good
+Model	|    Interaction Type	|    Speed	|    Effectiveness
+--------|-----------------------|-----------|------------------
+BM25	|    Lexical (TF-IDF)	|    ⚡ Fast	|    😐 Decent
+--------|-----------------------|-----------|------------------
+DPR (Dense Retriever)	|    Early (single vector)	|    ⚡⚡ Fast	|    😊 Good
+--------|-----------------------|-----------|------------------
+Cross-Encoder (BERT re-ranker)	|    Full Interaction	|    🐢 Slow	|    😍 Best
+--------|-----------------------|-----------|------------------
+ColBERT	|    Late Interaction	|    ⚡⚡ Fast	|    😃 Very Good
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
