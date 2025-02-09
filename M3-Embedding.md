@@ -34,3 +34,27 @@ Benefits:
 Based on the principle of ensemble learning, such heterogenous predictors can be combined as a stronger predictor. Thus, we integrate the relevance scores from different retrieval functions as the teacher signal, which is used to enhance the learning process via knowledge distillation.
 
 We optimize the batching strategy to achieve a large batch size and high training throughput, which substantially contributes to the discriminativeness of embeddings.
+
+ColBERT (Contextualized Late Interaction over BERT) is a neural retrieval model designed for efficient and effective dense retrieval in semantic search
+
+How ColBERT Works:
+1. Token-wise Representations:
+    Instead of compressing an entire document into a single vector (like in DPR), ColBERT keeps separate embeddings for each token in a query and a document.
+
+2. Late Interaction with Maximum Similarity:
+    Instead of computing a single dot product between query and document embeddings, ColBERT computes cosine similarities between each query token and all document tokens.
+    It then aggregates only the maximum similarity for each query token.
+    This allows it to capture finer-grained semantic relevance.
+
+3. Efficient Indexing & Retrieval:
+    Documents are preprocessed and stored as token-level embeddings.
+    During search, instead of computing full cross-attention (which is expensive), ColBERT uses efficient Maximum Similarity search to retrieve relevant documents.
+    It enables fast nearest neighbor search using inverted indexes and quantization.
+
+Model	Interaction Type	Speed	Effectiveness
+BM25	Lexical (TF-IDF)	⚡ Fast	😐 Decent
+DPR (Dense Retriever)	Early (single vector)	⚡⚡ Fast	😊 Good
+Cross-Encoder (BERT re-ranker)	Full Interaction	🐢 Slow	😍 Best
+ColBERT	Late Interaction	⚡⚡ Fast	😃 Very Good
+
+
