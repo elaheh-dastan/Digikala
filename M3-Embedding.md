@@ -52,9 +52,7 @@ How ColBERT Works:
     It enables fast nearest neighbor search using inverted indexes and quantization.
 
 Model	|    Interaction Type	|    Speed	|    Effectiveness
---------|-----------------------|-----------|------------------
 BM25	|    Lexical (TF-IDF)	|    ⚡ Fast	|    😐 Decent
---------|-----------------------|-----------|------------------
 DPR (Dense Retriever)	|    Early (single vector)	|    ⚡⚡ Fast	|    😊 Good
 --------|-----------------------|-----------|------------------
 Cross-Encoder (BERT re-ranker)	|    Full Interaction	|    🐢 Slow	|    😍 Best
