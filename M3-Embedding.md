@@ -74,3 +74,5 @@ Index Corpus in Dense Space:
 
 For each training query, retrieve the hardest negative from the current index:
 - The hardest negative is the nearest neighbor to the query embedding that is not a true positive.
+
+Given the limitations on GPU’s memory and computation power, people usually truncate the input data into short sequences for high throughput of training and a large batch size. In our approach, the training data is pre-processed by being grouped by sequence length. When producing a mini-batch, the training instances are sampled from the same group. Due to the similar sequence lengths, it significantly reduces sequence padding and facilitates a more effective utilization of GPUs
