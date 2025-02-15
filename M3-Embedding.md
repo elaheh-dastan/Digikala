@@ -67,3 +67,10 @@ selecting high-quality hard negatives is challenging:
 
 To address this, ANCE dynamically selects hard negatives using a nearest neighbor search over the dense index.
 
+Index Corpus in Dense Space:
+- Compute dense embeddings of all documents in the corpus.
+- Store these embeddings in a nearest neighbor index (e.g., FAISS or ANNOY).
+- Retrieve Hard Negatives Dynamically
+
+For each training query, retrieve the hardest negative from the current index:
+- The hardest negative is the nearest neighbor to the query embedding that is not a true positive.
