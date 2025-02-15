@@ -58,4 +58,12 @@ DPR (Dense Retriever)	|    Early (single vector)	|    ⚡⚡ Fast	|    😊 Good
 Cross-Encoder (BERT re-ranker)	|    Full Interaction	|    🐢 Slow	|    😍 Best
 ColBERT	|    Late Interaction	|    ⚡⚡ Fast	|    😃 Very Good
 
+ANCE (Approximate Nearest Neighbor Negative Contrastive Estimation):
+selecting high-quality hard negatives is challenging:
+
+- Using random negatives (documents chosen randomly) is too easy for the model and doesn't improve learning much.
+- Using BM25-based negatives can be effective, but the negatives might not be the best in a dense embedding space.
+- Using in-batch negatives (documents from other queries in the batch) is common but might not always provide sufficiently hard examples.
+
+To address this, ANCE dynamically selects hard negatives using a nearest neighbor search over the dense index.
 
