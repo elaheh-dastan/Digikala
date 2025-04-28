@@ -24,6 +24,8 @@ More advanced:
 4. Self-supervised learning to embed users/products into a low-dim space and cluster
 
 🧠 Deep Diver
+
 Semantic Search
+
 We already have product embedding and add business features, we can add the product cluster to the vector the same way, and when the user searches for something we also define the user's product cluster interest and then search in the Qd or we can search exctly like before and just rerank using this cluster interest.
 
