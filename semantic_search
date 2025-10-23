@@ -39,4 +39,19 @@ FAISS and HNSW are in the same family of tools
 
 
 ## Batch size
-Contrastive learning depends heavily on batch size
+Contrastive learning depends heavily on batch size, the bigger the better since it is more probable for the model to see better negatives not just random far ones
+
+## Cosine Similarity vs. Dot Product
+Dot product measures absolute similarity (large magnitudes ⇒ large scores).
+
+Cosine similarity measures directional similarity (angle between vectors).
+
+Dot Product is used when vector magnitude encodes confidence or importance.
+
+## LR importance
+Contrastive learning fine-tunes the angles between embeddings, not their magnitudes.
+Because of this geometric sensitivity, the learning rate must be much smaller and smoother than in typical classification training — otherwise, you destroy 
+the pretrained semantic structure instead of refining it.
+
+## Hard negatives
+Our harware resources may not be enough for very large batch sizes but we have to make sure our model sees hard negatives like mobile vs mobile cover
