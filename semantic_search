@@ -1,0 +1,42 @@
+# Semantic Search
+It is not an explanation of the project. just a few points I may forget by time.
+
+## Source model
+Our teacher model distilled to a student 6 layer Bert model is BGE-m3 which is then fine tuned with our own custom dataset. For fine tune training we use CLIP approach and 
+cross entropy loss function.
+
+## InfoNCE vs Cross Entropy
+Mathematically → the same thing.
+
+Conceptually → InfoNCE is cross-entropy loss used in a contrastive learning context.
+
+### Small but Important Tweaks
+a) Temperature Scaling (τ)
+
+InfoNCE always includes dividing logits by a temperature, which sharpens or softens the softmax distribution.
+Plain cross-entropy doesn’t necessarily have that.
+
+If you divide them by a small τ, say τ = 0.05, you make the differences larger before softmax. So now, the model becomes very confident that the positive is correct — 
+it pushes embeddings apart more aggressively.
+
+If you use a large τ, say τ = 1.0, everything becomes softer and the model is less confident. That makes the loss smaller, but the model learns less discriminative representations.
+
+b) Batch Negatives
+
+In InfoNCE, all other items in the batch act as negatives — this is not part of the standard cross-entropy formulation.
+
+c) Symmetry
+
+InfoNCE is often applied in both directions (query→doc and doc→query), while normal CE is one-way.
+
+d) Typical implementation
+
+Cross Entropy: F.cross_entropy()
+InfoNCE: F.cross_entropy(sim / τ, labels)
+
+## indexing
+FAISS and HNSW are in the same family of tools
+
+
+## Batch size
+Contrastive learning depends heavily on batch size
