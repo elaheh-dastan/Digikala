@@ -55,3 +55,9 @@ the pretrained semantic structure instead of refining it.
 
 ## Hard negatives
 Our harware resources may not be enough for very large batch sizes but we have to make sure our model sees hard negatives like mobile vs mobile cover
+
+## Multi metric finetuning
+Conflict with contrastive loss formulation:
+
+CLIP’s InfoNCE loss assumes one true positive per query and normalizes across the batch. If you label multiple products as positive with equal weights, it can confuse the 
+denominator normalization, weakening gradients. If you use values >1, you might distort similarity scaling and destabilize training.
