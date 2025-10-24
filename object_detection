@@ -1,0 +1,19 @@
+# Object Detection
+## Motivation
+We were getting noisy matches when users uploaded images: global image embeddings often matched background or irrelevant objects, creating 
+false positives.
+
+## Model choice
+OWLv2 is a text-conditioned, open-vocabulary object detection model with two main components: an image encoder (vision backbone) and a text encoder 
+(text/label encoder). It can operate zero-shot by matching text queries to visual regions.
+
+## Engineering constraints
+The model is more research-oriented, to improve its RPS we did:
+
+1. Because our production catalog uses a fixed taxonomy (~2,000 categories), we decided to stop using OWLv2’s text encoder at inference time. 
+Instead of computing text-to-region similarity on the fly with text embeddings, we precomputed the embedding representation for each catalog category 
+and matched region embeddings directly against those.
+
+2. We halved the floating point precision.
+
+
