@@ -19,3 +19,6 @@ Isolation ensures that a new transaction, accessing a particular record, waits u
 Durability ensures that the database maintains all committed records, even if the system experiences failure. It guarantees that when ACID transactions are committed, 
 all changes are permanent and unimpacted by subsequent system failures. For example, in a messaging application, when a user sends a message and receives a confirmation of successful delivery, 
 the durability property ensures that the message is never lost. This remains true even if the application or server encounters a failure.
+
+# BASE
+BASE stands for basically available, soft state, and eventually consistent.
