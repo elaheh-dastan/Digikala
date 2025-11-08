@@ -9,7 +9,15 @@ Sensitive to outliers
 
 # R² Score (Coefficient of Determination)
 R² tells you how much of the variance in the target variable is explained by your model.
+
 ![images/r2.png](images/r2.png)
+
+Interpretation
+
+- 𝑅2=1: perfect predictions
+- 𝑅2=0: model predicts no better than the mean
+- 𝑅2<0: model is worse than predicting the mean
+
 
 # Cross Entropy, Cosine Similarity, Logit  Scale
 ## Cross Entropy
