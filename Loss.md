@@ -9,6 +9,7 @@ Sensitive to outliers
 
 # R² Score (Coefficient of Determination)
 R² tells you how much of the variance in the target variable is explained by your model.
+![images/r2.png](images/r2.png)
 
 # Cross Entropy, Cosine Similarity, Logit  Scale
 ## Cross Entropy
