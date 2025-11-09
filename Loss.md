@@ -18,12 +18,33 @@ Interpretation
 - 𝑅2=0: model predicts no better than the mean
 - 𝑅2<0: model is worse than predicting the mean
 
-
-# Cross Entropy, Cosine Similarity, Logit  Scale
-## Cross Entropy
+# Cross Entropy
 Used for:
 → Classification tasks (predicting discrete categories like “electronics”, “clothing”, etc.)
 
 What it measures:
 → How far the predicted probability distribution is from the true class distribution.
+
+yi: one-hot true label
+
+Where it’s used:
+
+- Classification (softmax output)
+- Contrastive learning (after computing similarities + scaling + softmax)
+
+Key property:
+
+It’s sensitive to probabilities, not raw vector similarity.
+
+# Cosine Similarity
+What it measures:
+
+→ The angle between two vectors — not their magnitude.
+
+Key property:
+
+It’s a distance metric, not a loss function by itself.
+
+# logit scale
+
 
