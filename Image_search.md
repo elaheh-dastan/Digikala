@@ -12,4 +12,4 @@ This removes texture/color and leaves pure shape.
 ## Edge Augmentation
 
 ![images/user_query_1.jpg](images/user_query_1.jpg)
-![images/edge_map_1.jpg](images/edge_map_1.jpg)
+![images/edge_map_1.png](images/edge_map_1.png)
