@@ -21,6 +21,8 @@ edge(customer_image) ↔ edge(product_image)
 ## Logo crop augmentations
 brand cues
 
+(patch(C), P)
+
 # Hard Negatives
 - Same category wrong model
 - Same color wrong shape
