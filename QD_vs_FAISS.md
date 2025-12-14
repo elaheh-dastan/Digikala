@@ -18,6 +18,35 @@
 - GPU support
 - Full control over memory & performance
 
+### What FAISS does not do
+- ❌ No server
+- ❌ No persistence (unless you manage it)
+- ❌ No metadata filtering
+- ❌ No CRUD semantics
+- ❌ No auth / scaling / replication
+
+```
+index = faiss.IndexHNSWFlat(384, 32)
+index.add(embeddings)
+scores, ids = index.search(query, k=10)
+```
+
+
+## Qdrant
+- Full vector database
+- Runs as a server
+- Built on HNSW
+- Stores vectors + payloads (metadata)
+
+### What Qdrant gives you
+- ✅ REST & gRPC API
+- ✅ Disk persistence
+- ✅ Filtering (price < 50, brand = apple)
+- ✅ Hybrid search (vector + filters)
+- ✅ Sharding & replication
+- ✅ Versioned updates
+- ✅ Production-ready
+
 | If you want…                                        | Choose     |
 | --------------------------------------------------- | ---------- |
 | **Fast local ANN, simple setup**                    | **FAISS**  |
