@@ -25,6 +25,7 @@
 - ❌ No CRUD semantics
 - ❌ No auth / scaling / replication
 
+### Typical FAISS usage
 ```
 index = faiss.IndexHNSWFlat(384, 32)
 index.add(embeddings)
@@ -46,6 +47,25 @@ scores, ids = index.search(query, k=10)
 - ✅ Sharding & replication
 - ✅ Versioned updates
 - ✅ Production-ready
+
+### Typical Qdrant usage
+```
+client.search(
+    collection_name="products",
+    query_vector=query,
+    filter={
+        "must": [{"key": "brand", "match": {"value": "apple"}}]
+    },
+    limit=10
+)
+```
+### Metadata & filtering (biggest difference)
+#### FAISS
+You must:
+- Maintain ID → metadata map
+- Post-filter results yourself
+- Re-rank manually
+
 
 | If you want…                                        | Choose     |
 | --------------------------------------------------- | ---------- |
